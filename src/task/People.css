@@ -1,0 +1,14 @@
+.People-things {
+    background: rgb(189, 165, 165);
+    padding: 10%;
+    border-radius: 5%;
+    margin: 3% 5% 40%;
+    border-width: 10px;
+    border-color: rgb(168, 168, 212);
+    border-style:dashed;
+
+    * {
+        box-sizing: border-box;
+      }
+}
+
