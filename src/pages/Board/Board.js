@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import useDataFetching from '../../Hooks/useDataFetching';
 import Lane from '../../components/Lane/Lane';
 import './Board.css';
@@ -9,9 +10,21 @@ const lanes = [
   { id: 4, title: 'Done' },
 ];
 
-function Board() {
-const [loading, error, data] = useDataFetching("https://my-json-server.typicode.com/PacktPublishing/React-Projects-Second-Edition/tasks");
+  function onDragStart(e, id) {
+    e.dataTransfer.setData('id', id);
+  }
 
+  function onDragOver(e) {
+    e.preventDefault();
+  }
+
+function Board() {
+  const [loading, error, data] = useDataFetching("https://my-json-server.typicode.com/PacktPublishing/React-Projects-Second-Edition/tasks");
+  const [tasks, setTasks] = useState([]);
+
+  useEffect (() => {
+    setTasks(data);
+  }, [data]);
 
   return (
     <div className='Board-wrapper'>
@@ -20,8 +33,10 @@ const [loading, error, data] = useDataFetching("https://my-json-server.typicode.
         title={lane.title}
         loading={loading}
         error={error} 
-        tasks= {tasks.filter((task) => 
+        tasks= {data.filter((task) => 
           task.lane === lane.id)}
+          onDragStart = {onDragStart}
+          onDragOver = {onDragOver}
         />
       ))}
     </div>
