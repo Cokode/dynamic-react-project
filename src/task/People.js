@@ -1,5 +1,5 @@
 import React from "react";
-import './People.css';
+//import './People.css';
 import Person from "./Person";
 
 const people = [
@@ -8,6 +8,20 @@ const people = [
         name : "collins",
         age : 54,
         applicant : false,
+    },
+
+    {
+        id: 2,
+        name : "Frank",
+        age : 44,
+        applicant : true,
+    },
+
+    {
+        id: 2,
+        name : "Frank",
+        age : 44,
+        applicant : true,
     },
 
     {
@@ -27,7 +41,7 @@ export default function People () {
                 key = {person.id}
                 name = {person.name}
                 age = {person.age}
-                applicant = {person.applicant? "true" : "false"}
+                applicant = {person.applicant ? "true" : "false"}
             />
             ))}           
        </div>
