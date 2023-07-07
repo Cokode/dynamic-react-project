@@ -4,10 +4,10 @@
 
 >>
 
-I built a Dynamic project management board that lets you move, drag, and drop tasks from one late to another using the HTML5 Drag and drop API. 
+I built a Dynamic project management board that lets you `move`, `drag`, and drop tasks from one late to another using the HTML5 `Drag and Drop` API. 
 
 > The data flow of this application is handled using local state and life cycles and determines which tasks ae displayed in the different lanes. 
 
-This applicatin also uses the the advance React pattern of custom hooks. With Custom Hooks, you can reuse state logic in fuction components across your applications.
+This applicatin also uses the the advance React pattern of `Custom Hooks`. With Custom Hooks, you can reuse state logic in fuction components across your applications.
 
 
