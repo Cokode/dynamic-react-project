@@ -4,7 +4,7 @@
 
 >>
 
-I built a Dynamic project management board that lets you `move`, `drag`, and drop tasks from one late to another using the HTML5 `Drag and Drop` API. 
+I built a Dynamic project management board that lets you `move`, `drag`, and drop tasks from one slate to another using the HTML5 `Drag and Drop` API. 
 
 > The data flow of this application is handled using local state and life cycles and determines which tasks ae displayed in the different lanes. 
 
